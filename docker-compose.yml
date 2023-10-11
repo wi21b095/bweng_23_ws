@@ -26,7 +26,8 @@ services:
       - minio
 
   db:
-    image: mariadb
+    image: mariadb:11.1
+    container_name: bweng-db
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: spring

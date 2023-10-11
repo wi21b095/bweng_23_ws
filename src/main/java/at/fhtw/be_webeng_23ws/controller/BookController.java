@@ -1,6 +1,6 @@
 package at.fhtw.be_webeng_23ws.controller;
 
-import at.fhtw.be_webeng_23ws.model.Book;
+import at.fhtw.be_webeng_23ws.entity.Book;
 import at.fhtw.be_webeng_23ws.service.BookService;
 import org.springframework.web.bind.annotation.*;
 
