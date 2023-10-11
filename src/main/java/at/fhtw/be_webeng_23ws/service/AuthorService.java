@@ -20,5 +20,8 @@ public class AuthorService {
         return authorRepository.findAll();
     }
 
+    public Author getAuthor(UUID id) {
+        return authorRepository.findById(id).orElseThrow();
+    }
 
 }

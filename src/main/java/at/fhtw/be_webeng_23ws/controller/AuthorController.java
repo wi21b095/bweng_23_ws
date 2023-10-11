@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 public class AuthorController {
@@ -19,4 +20,10 @@ public class AuthorController {
     public List<Author> getAuthors() {
         return authorService.getAuthors();
     }
+
+    @GetMapping("/authors/{id}")
+        public Author getAuthor(UUID id) {
+        return authorService.getAuthor(id);
+    }
 }
+

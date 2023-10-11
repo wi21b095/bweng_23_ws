@@ -20,7 +20,7 @@ public class Author {
 
     private String name;
 
-    @OneToMany(cascade = CascadeType.PERSIST)//, fetch = FetchType.EAGER)//, mappedBy = "author")
+    @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)//, mappedBy = "author")
     private List<Book> books = new ArrayList<>();
 
     public Author(String name) {

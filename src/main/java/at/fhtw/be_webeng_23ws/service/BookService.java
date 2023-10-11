@@ -30,4 +30,18 @@ public class BookService {
     public Book createBook(Book book) {
         return bookRepository.save(book);
     }
+
+
+    //visible for testing
+    String getEra(int year){
+        if (year < 1900) {
+            return "19th century or before";
+        } else if (year < 2000) {
+            return "20th century";
+        } else if (year < 2100) {
+            return "21st century";
+        } else {
+            throw new IllegalArgumentException("Year must not be later than 2099");
+        }
+    }
 }
