@@ -6,11 +6,12 @@ import java.util.UUID;
 
 @Getter
 public class Book {
-    private UUID id = UUID.randomUUID();
+    private UUID id;
     private String title;
     private Author author;
 
-    public Book(String title, Author author) {
+    public Book(UUID id, String title, Author author) {
+        this.id = id;
         this.title = title;
         this.author = author;
 

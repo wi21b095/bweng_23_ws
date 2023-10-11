@@ -5,15 +5,16 @@ import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Getter
 public class Author {
-    private int id; // for now
+    private UUID id;
     private String name;
     @JsonIgnore
     private List<Book> books = new ArrayList<>();
 
-    public Author(int id, String name) {
+    public Author(UUID id, String name) {
         this.id = id;
         this.name = name;
     }

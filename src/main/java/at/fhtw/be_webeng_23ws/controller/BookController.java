@@ -5,6 +5,7 @@ import at.fhtw.be_webeng_23ws.service.BookService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 public class BookController {
@@ -20,7 +21,7 @@ public class BookController {
     }
 
     @GetMapping("/books/{id}")
-    public Book getBook(@PathVariable String id) {
+    public Book getBook(@PathVariable UUID id) {
         return bookService.getBook(id);
     }
 
